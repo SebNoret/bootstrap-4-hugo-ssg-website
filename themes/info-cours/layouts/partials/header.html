@@ -1,0 +1,48 @@
+ <!--header-->
+ <div class="bg-dark">
+    <header class="container">
+        <div class="row mt-5">
+            
+                <nav class="col navbar fixed-top navbar-expand-lg  navbar-dark bg-dark">
+                    <a  class="navbar-brand text-uppercase" href="/"><img src="/img/logo.png" width="40" height="40" alt="logo du site">{{ .Site.Title}}</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div  id="navbarContent" class="collapse navbar-collapse">
+                        
+                        <ul class="navbar-nav ml-auto">
+                            {{ $this_page := . }}
+                            {{ range .Site.Menus.main }}
+                                    {{ if .HasChildren }}
+                                        <div class="dropdown">
+                                            
+                                            <a class="nav-link dropdown-toggle text-uppercase" href="#" role="button" id="deroulanta" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ .Name }}</a>
+                                        
+                                        <div class="dropdown-menu" aria-labelledby="deroulanta">
+                                    {{ range .Children }}
+                                            
+                                        <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
+
+                                    {{ end }}
+                                        
+                                        </div>
+                                    </div>
+                                    {{ else}}
+
+                                        <li class="nav-item text-uppercase"><a href="{{ .URL }}" class="nav-link">{{ .Name }}</a></li>
+
+                                    {{ end }}
+                            
+                            
+                            
+                            {{ end}}
+                        </ul>
+                        
+                    </div>    
+                </nav>
+            
+        </div>
+
+    </header>
+</div>        

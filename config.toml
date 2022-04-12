@@ -1,0 +1,57 @@
+baseURL = "/"
+languageCode = "fr-Fr"
+title = "Info-cours"
+theme = "info-cours"
+
+
+[menu]
+    [[menu.main]]
+        identifier = "home"
+        name = "Accueil"
+        url = "/"
+        weight = "1"
+    [[menu.main]]
+        identifier = "info-cours" 
+        name = "Découvrez Info-cours"
+        weight = "2"
+    [[menu.main]]
+        name = "A propos d'Info-cours"
+        parent = "info-cours"
+        url = "/about"
+        weight = 1
+    [[menu.main]]
+        name = "Nos formation"
+        parent = "info-cours"
+        url = "/presentation/studies"
+        weight = 2
+    [[menu.main]]
+        name = "Nos professeurs"
+        parent = "info-cours"
+        url = "/presentation/teachers"
+        weight = 3
+    [[menu.main]]
+        name = " Trouvez un emploi"
+        parent = "info-cours"
+        url = "/presentation/job"
+        weight = 4
+    [[menu.main]]
+        name = "Tous les cours"
+        url = "/lessons"        
+        weight ="3"
+    [[menu.main]]
+        name ="Contact"
+        url = "#contact"
+
+
+
+
+    [[menu.footer]]
+        name="A propos"
+        url ="/about"
+        weight ="1"
+    [[menu.footer]]
+        name = "Conditions d'utilisation"
+        url = "/terms-of-use"
+        weight = "3"
+[params]
+        page-background = "/img/page-background.png"

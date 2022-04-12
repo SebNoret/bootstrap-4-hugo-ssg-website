@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div id="main-content" class="container shadow bg-light">
+    <div class="row">
+                       
+        <h2 class="col mb-4">{{ .Title }}</h2>
+    </div>  
+    {{ partial "widgets/search.html" . }}
+    <div class="row">                       
+        
+            {{ range .Pages }}
+            <div class="col-12 col-md-4">
+                {{ partial "widgets/lesson-card" . }}
+            </div>    
+            
+            {{ end }}
+        </div>
+</div>
+{{ end }}

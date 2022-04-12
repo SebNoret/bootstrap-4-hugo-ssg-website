@@ -1,0 +1,18 @@
+{{ define "main" }}
+    <div id="main-content" class="container shadow bg-light">
+        <div class="row mb-5">
+            <div class="col text-center">
+                <img src="{{ .Params.feature_image}}" alt="{{ .Params.image_alt }}">
+            </div>
+           
+        </div>
+        <div class="row mb-5">
+            <div class="col text-center">
+                <h2 class="text-uppercase font-weight-bold">{{ .Title }}</h2>
+            </div>            
+        </div> 
+        <div class="row"> 
+            {{ .Content}}
+        </div>
+    </div>
+{{ end }}
